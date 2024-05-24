@@ -7,6 +7,7 @@ import ClassComponent from './components/ClassComponent'
 import Toggle from './components/Toggle'
 import CounterDiv from './components/CounterDiv'
 import PropsType from './components/PropsType'
+import InlineCSS from './components/cssComponents/InlineCSS'
 
 
 function App() {
@@ -14,14 +15,19 @@ function App() {
 
   return (
     <>
-      <PropsType
+
+      <InlineCSS></InlineCSS>
+
+      {/* <PropsType
         name='Gojo'
         age={25}
         isMarried={false}
         array={[4, 5]}
-        obj={{ s: '10', a: '20', t: '25', o: '10', r: '20', u: '25' }}></PropsType>
+        obj={{ s: '10', a: '20', t: '25', o: '10', r: '20', u: '25' }}></PropsType> */}
+
       <br></br>
-      <Toggle text='Welcome to React Stretch'>
+
+      {/* <Toggle text='Welcome to React Stretch'>
         <p name="Luffy">Para-1</p>
         <p name="Zoro">Para-2</p>
         <p>Para-3</p>
@@ -36,7 +42,7 @@ function App() {
 
       <br></br>
 
-      <CounterDiv num={0} />
+      <CounterDiv num={0} /> */}
     </>
   )
 }
