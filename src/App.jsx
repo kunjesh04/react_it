@@ -8,6 +8,7 @@ import Toggle from './components/Toggle'
 import CounterDiv from './components/CounterDiv'
 import PropsType from './components/PropsType'
 import InlineCSS from './components/cssComponents/InlineCSS'
+import FormHandling from './components/FormHandling'
 
 
 function App() {
@@ -16,7 +17,10 @@ function App() {
   return (
     <>
 
-      <InlineCSS></InlineCSS>
+      <FormHandling />
+
+
+      {/* <InlineCSS></InlineCSS> */}
 
       {/* <PropsType
         name='Gojo'
