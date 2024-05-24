@@ -10,6 +10,7 @@ import PropsType from './components/PropsType'
 import InlineCSS from './components/cssComponents/InlineCSS'
 import FormHandling from './components/FormHandling'
 import Parent from './components/Parent'
+import TicTacToe from './components/SelfPractice/TicTacToe'
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
 
   return (
     <>
+    <TicTacToe />
 
-    <Parent></Parent>
+    {/* <Parent></Parent> */}
 
       {/* <FormHandling /> */}
 
