@@ -9,6 +9,7 @@ import CounterDiv from './components/CounterDiv'
 import PropsType from './components/PropsType'
 import InlineCSS from './components/cssComponents/InlineCSS'
 import FormHandling from './components/FormHandling'
+import Parent from './components/Parent'
 
 
 function App() {
@@ -17,7 +18,9 @@ function App() {
   return (
     <>
 
-      <FormHandling />
+    <Parent></Parent>
+
+      {/* <FormHandling /> */}
 
 
       {/* <InlineCSS></InlineCSS> */}
