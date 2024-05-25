@@ -15,14 +15,23 @@ import Parent from './components/Parent'
 import TicTacToe from './components/SelfPractice/TicTacToe'
 import LifeCycleA from './components/LifeCycleMethods/LifeCycleA';
 import ToDo from './components/ToDo';
-
+import Ref from './components/Ref';
+import HoverCounter from './components/HOC/HoverCounter';
+import ClickCounter from './components/HOC/ClickCounter';
+import Lifts from './components/HOC/LiftAuth/Lifts';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <ToDo />
+      <Lifts />
+      {/* 
+    < HoverCounter />
+    <ClickCounter /> */}
+      {/* <Ref/> */}
+
+      {/* <ToDo /> */}
 
       {/* <LifeCycleA />
       <TicTacToe /> */}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Counter from './HOC/Counter';
 
 export default class CounterDiv extends Component {
   
