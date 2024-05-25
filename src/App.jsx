@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import "./components/SelfPractice/sty.css";
+
 import FunctionalComponent from "./components/FunctionalComponent"
 import ClassComponent from './components/ClassComponent'
 import Toggle from './components/Toggle'
@@ -11,6 +13,8 @@ import InlineCSS from './components/cssComponents/InlineCSS'
 import FormHandling from './components/FormHandling'
 import Parent from './components/Parent'
 import TicTacToe from './components/SelfPractice/TicTacToe'
+import LifeCycleA from './components/LifeCycleMethods/LifeCycleA';
+import ToDo from './components/ToDo';
 
 
 function App() {
@@ -18,9 +22,12 @@ function App() {
 
   return (
     <>
-    <TicTacToe />
+      <ToDo />
 
-    {/* <Parent></Parent> */}
+      {/* <LifeCycleA />
+      <TicTacToe /> */}
+
+      {/* <Parent></Parent> */}
 
       {/* <FormHandling /> */}
 

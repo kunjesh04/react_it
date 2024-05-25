@@ -1,0 +1,25 @@
+.square {
+    /* background: #fff; */
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    /* font-weight: bold; */
+    line-height: 34px;
+    height: 82px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 82px;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.status{
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif ;
+}

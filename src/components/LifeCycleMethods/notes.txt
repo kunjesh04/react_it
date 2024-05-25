@@ -1,0 +1,27 @@
+Mounting => When an instance of a component is being created and inserted into the DOM
+Updating => When a component is being re-rendered as a result of changes to either its props or state
+Unmounting => When a component is being removed from the DOM
+Error Handling => When there is an error during rendering, in a lifecyle method
+
+=====================================================================================================
+
+# Mounting Methods :
+
+1. constructor(props)
+    A special function that will get called whenever a new component is created.
+    Initializing state
+    Binding the event handlers
+
+2. static getDerivedStateFromProps(props, state)
+    When the state of the component depends on changes in props over time
+    Set the state
+    Do not cause side effects. Ex: HTTP requests
+
+3. render()
+    only required method
+    Read props & state and return JSX
+    Do not hange state or interact 
+
+4. componentDidMount()
+    Invoked immediately after a component and all its children components have been rendered to the DOM
+    Cause side effects. Ex: interact with the DOM or perform 
