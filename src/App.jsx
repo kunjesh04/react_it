@@ -19,13 +19,15 @@ import Ref from './components/Ref';
 import HoverCounter from './components/HOC/HoverCounter';
 import ClickCounter from './components/HOC/ClickCounter';
 import Lifts from './components/HOC/LiftAuth/Lifts';
+import Counter from './components/Hooks/Counter';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Lifts />
+    < Counter />
+      {/* <Lifts /> */}
       {/* 
     < HoverCounter />
     <ClickCounter /> */}
