@@ -13,9 +13,19 @@ export default class ToDo extends Component {
     addTask(event) {
         event.preventDefault();
         let newTask = event.target.task.value;
+        const newTaskObj = {
+            id: Date.now(),
+            task: newTask
+        }
+        const isDuplicate = this.state.taskArr.some((item)=> item.task === newTask)
+        if (isDuplicate){
+            alert('Task Already Exists');
+            event.target.task.value = '';
+            return;
+        }
         if (newTask.trim() !== "") {
             this.setState({
-                taskArr: [...this.state.taskArr, newTask]
+                taskArr: [...this.state.taskArr, newTaskObj]
             });
             event.target.task.value = '';
         } else {
@@ -23,9 +33,9 @@ export default class ToDo extends Component {
         }
     }
 
-    removeTask(index) {
+    removeTask(id) {
         this.setState({
-            taskArr: this.state.taskArr.filter((task, i) => i != index)
+            taskArr: this.state.taskArr.filter((task) => task.id != id)
         });
     }
 
@@ -33,17 +43,19 @@ export default class ToDo extends Component {
         return (
             <div >
                 <h2>To Do List </h2>
-                <form onSubmit={this.addTask} style={{margin:"15px", boxSizing:"content-box"}}>
+                <form onSubmit={this.addTask} style={{ margin: "15px", boxSizing: "content-box" }}>
                     <input type='text' name='task' placeholder='task'></input>
-                    <br/>
-                    <button type="submit" style={{margin:"15px"}}>Add</button>
+                    <br />
+                    <button type="submit" style={{ margin: "15px" }}>Add</button>
                 </form>
                 <ol>
-                    {this.state.taskArr.map((task, index) => {
-                        return (<li key={index}>
-                            {task}
-                            <button onClick={() => this.removeTask(index)}>Remove</button>
-                        </li>)
+                    {this.state.taskArr.map((task) => {
+                        return (
+                            <li key={task.id}>
+                                {task.task}
+                                <button onClick={() => this.removeTask(task.id)}>Remove</button>
+                            </li>
+                        )
                     })}
                 </ol>
             </div>
