@@ -26,7 +26,9 @@ function App() {
 
   return (
     <>
-    < Counter />
+      <TicTacToe />
+
+      {/* < Counter /> */}
       {/* <Lifts /> */}
       {/* 
     < HoverCounter />
@@ -35,8 +37,7 @@ function App() {
 
       {/* <ToDo /> */}
 
-      {/* <LifeCycleA />
-      <TicTacToe /> */}
+      {/* <LifeCycleA />*/}
 
       {/* <Parent></Parent> */}
 
