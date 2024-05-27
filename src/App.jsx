@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import "./components/SelfPractice/sty.css";
 
@@ -23,14 +24,39 @@ import Counter from './components/Hooks/Counter';
 import Table from './components/Table';
 import ClassCounter from './components/Hooks/useEffect/ClassCounter';
 import HookCounter from './components/Hooks/useEffect/HookCounter';
+import FindCursor from './components/Hooks/FindCursor'
+import ClassTimer from './components/Hooks/useEffect/ClassTimer';
+import FuncTimer from './components/Hooks/useEffect/FuncTimer';
+import Register from './components/Router/Register'
+import Login from './components/Router/Login'
+import About from './components/Router/About'
+import Home from './components/Router/Home'
+import NavBar from './components/Router/NavBar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <ClassCounter />
-    < HookCounter/>
+      <h5>Main App</h5>
+
+      <Router>
+        <NavBar />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='login' element={<Login />} />
+          <Route path='register' element={<Register />} />
+        </Routes>
+      </Router>
+
+      {/* < ClassTimer /> */}
+      <br />
+      {/* < FuncTimer/> */}
+      {/* <FindCursor/> */}
+      {/* <ClassCounter /> */}
+      {/* < HookCounter/> */}
       {/* <Table /> */}
       {/* <TicTacToe /> */}
 
