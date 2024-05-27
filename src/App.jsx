@@ -20,13 +20,19 @@ import HoverCounter from './components/HOC/HoverCounter';
 import ClickCounter from './components/HOC/ClickCounter';
 import Lifts from './components/HOC/LiftAuth/Lifts';
 import Counter from './components/Hooks/Counter';
+import Table from './components/Table';
+import ClassCounter from './components/Hooks/useEffect/ClassCounter';
+import HookCounter from './components/Hooks/useEffect/HookCounter';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <TicTacToe />
+    <ClassCounter />
+    < HookCounter/>
+      {/* <Table /> */}
+      {/* <TicTacToe /> */}
 
       {/* < Counter /> */}
       {/* <Lifts /> */}
